@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
 
 html, body, input, button{
     font-family: "Poppins", sans-serif;
@@ -13,37 +13,120 @@ body{
     background-size: cover;
     font-size: 16px;
 }
-
+input, button{
+    border: none;
+    outline: none;
+}
+input{
+    width: 28.1em;
+    height: 4em;
+    font-weight: 700;
+    color: #363636;
+    caret-color: hsl(248, 32%, 49%);
+}
+input::placeholder{
+    font-weight: 600;
+}
+button{
+    cursor: pointer;
+}
 main, .inputAndImg{
     display: flex;
     align-items: center;
+}
+
+main, button{
+    color: hsl(0, 0%, 100%);
 }
 main{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
 }
 main>section:last-child{
-    width: 33em;
+    margin-left: 5em;
 }
 
 h1{
     font-size: 3em;
     line-height: 1.1em;
     margin-bottom: .5em;
+    min-width: 8.5em;
+}
+h1+p{
+    min-width: 31.2em;
 }
 
+.news, .form{
+    border-radius: .7em;
+    box-shadow: 0 .5em 0 hsla(249, 10%, 26%, 0.308);
+}
 .news{
     background: hsl(248, 32%, 49%);
-    box-shadow: 0 .7em 0 hsla(249, 10%, 26%, 0.308);
-    border-radius: .7em;
-    margin-bottom: 2em;
-    width: 100%;
+    margin-bottom: 1.5em;
+    text-align: center;
+    width: 33em;
+    padding: 1em 0;
+    font-weight: 300;
 }
 
 a{
+    font-weight: 600;
     text-decoration: none;
-    color: ;
+    color: hsl(0, 100%, 74%);
+}
+
+.inputAndImg{
+    justify-content: center;
+    border: 1px solid hsl(0, 0%, 85%);
+    border-radius: .3em;
+}
+.inputAndImg{
+    margin-bottom: 1.2em;
+}
+.inputAndImg:has(input:focus){
+    border-color: hsl(248, 32%, 49%);
+}
+
+.form{
+    padding: 2.35em;
+    width: 28.25em;
+    background: white;
+}
+
+span{
+    display: none;
+    justify-content: end;
+    color: hsl(0, 100%, 74%);
+}
+
+button{
+    width: 100%;
+    border-radius: .5em;
+    letter-spacing: .1em;
+    padding: 1.4em 0 .7em;
+    box-shadow: 0 .3em 0 hsl(154, 57%, 45%);
+    text-transform: uppercase;
+    background: hsl(154, 59%, 51%);
+    font-weight: 500;
+}
+
+.pTerms{
+    margin-top: 1.5em;
+    font-weight: 200;
+    text-align: center;
+    font-size: .7em;
+    color: hsl(246, 25%, 77%);
+}
+
+.inputAndImg.error{
+    border: 1px solid red;
+}
+.inputAndImg.error>img{
+    display: block;
+}
+
+img[src$="error.svg"]{
+    display: none;
 }
