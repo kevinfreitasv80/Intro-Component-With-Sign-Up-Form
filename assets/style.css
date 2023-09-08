@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap');
+
+:root{
+    --color1: hsl(0, 100%, 74%);
+    --color2: hsl(248, 32%, 49%);
+    --color3: hsl(0, 0%, 100%);
+}
 
 html, body, input, button{
     font-family: "Poppins", sans-serif;
@@ -8,7 +14,7 @@ html, body{
     padding: 0;
 }
 body{
-    background: url(../images/bg-intro-desktop.png) hsl(0, 100%, 74%);
+    background: url(../images/bg-intro-desktop.png) var(--color1);
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 16px;
@@ -22,7 +28,7 @@ input{
     height: 4em;
     font-weight: 700;
     color: #363636;
-    caret-color: hsl(248, 32%, 49%);
+    caret-color: var(--color2);
 }
 input::placeholder{
     font-weight: 600;
@@ -36,7 +42,7 @@ main, .inputAndImg{
 }
 
 main, button{
-    color: hsl(0, 0%, 100%);
+    color: var(--color3);
 }
 main{
     position: absolute;
@@ -63,7 +69,7 @@ h1+p{
     box-shadow: 0 .5em 0 hsla(249, 10%, 26%, 0.308);
 }
 .news{
-    background: hsl(248, 32%, 49%);
+    background: var(--color2);
     margin-bottom: 1.5em;
     text-align: center;
     width: 33em;
@@ -74,7 +80,7 @@ h1+p{
 a{
     font-weight: 600;
     text-decoration: none;
-    color: hsl(0, 100%, 74%);
+    color: var(--color1);
 }
 
 .inputAndImg{
@@ -86,19 +92,19 @@ a{
     margin-bottom: 1.2em;
 }
 .inputAndImg:has(input:focus){
-    border-color: hsl(248, 32%, 49%);
+    border-color: var(--color2);
 }
 
 .form{
     padding: 2.35em;
     width: 28.25em;
-    background: white;
+    background: var(--color3);
 }
 
 span{
     display: none;
     justify-content: end;
-    color: hsl(0, 100%, 74%);
+    color: var(--color1);
 }
 
 button{
@@ -110,6 +116,10 @@ button{
     text-transform: uppercase;
     background: hsl(154, 59%, 51%);
     font-weight: 500;
+    transition: .4s;
+}
+button:hover{
+    background: hsl(154, 65%, 68%);
 }
 
 .pTerms{
@@ -129,4 +139,8 @@ button{
 
 img[src$="error.svg"]{
     display: none;
+}
+span[id^="span"]{
+    font-size: .7em;
+    transform: translateY(-1.4em);
 }

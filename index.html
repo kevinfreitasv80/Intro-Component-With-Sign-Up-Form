@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <title>Frontend Mentor | Intro component with sign up form</title>
     <link rel="stylesheet" href="./assets/style.css">
-    <script src="./assets/script.js"></script>
+    <script defer src="./assets/script.js"></script>
   </head>
   <body>
     <main>
@@ -16,34 +16,34 @@
       </section>
       <section>
         <article class="news"><strong>Try it free 7 days</strong> then $20/mo. thereafter</article>
-        <section class="form">
+        <form method="post" class="form">
           <section>
             <section>
               <article class="inputAndImg">
-                <input id="firstName" type="text" placeholder="First Name" required>
+                <input id="firstNameInput" type="text" placeholder="First Name">
                 <img src="./images/icon-error.svg" alt="Icon Error">
               </article>
-              <span>First Name cannot be empty</span>
+              <span id="spanFirstName"><i>First Name cannot be empty</i></span>
               <article class="inputAndImg">
-                <input id="lastName" type="text" placeholder="Last Name" required>
+                <input id="lastNameInput" type="text" placeholder="Last Name">
                 <img src="./images/icon-error.svg" alt="Icon Error">
               </article>
-              <span>Last Name cannot be empty</span>
+              <span id="spanLastName"><i>Last Name cannot be empty</i></span>
               <article class="inputAndImg">
-                <input id="email" type="email" placeholder="Email Address" required>
+                <input id="emailInput" type="email" placeholder="Email Address">
                 <img src="./images/icon-error.svg" alt="Icon Error">
               </article>
-              <span>Looks like is not an email</span>
+              <span id="spanEmail"><i>Looks like is not an email</i></span>
               <article class="inputAndImg">
-                <input id="password" type="password" placeholder="Password" required>
+                <input id="passwordInput" type="password" placeholder="Password">
                 <img src="./images/icon-error.svg" alt="Icon Error">
               </article>
-              <span>Password cannot be empty</span>
+              <span id="spanPassword"><i>Password cannot be empty</i></span>
             </section>
-            <button id="send">Claim your free trial</button>
+            <button type="submit" id="send">Claim your free trial</button>
           </section>
           <p class="pTerms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
-        </section>
+        </form>
       </section>
     </main>
   </body>
