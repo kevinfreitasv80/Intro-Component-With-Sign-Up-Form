@@ -16,7 +16,7 @@ html, body{
 body{
     background: url(../images/bg-intro-desktop.png) var(--color1);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover 100vh;
     font-size: 16px;
 }
 input, button{
@@ -143,4 +143,55 @@ img[src$="error.svg"]{
 span[id^="span"]{
     font-size: .7em;
     transform: translateY(-1.4em);
+}
+
+@media (max-width: 1150px) {
+    main>section:last-child{
+        margin-left: 1em;
+    }
+}
+@media (max-width: 1080px) {
+    main{
+        text-align: center;
+        flex-direction: column;
+    }
+    h1{
+        margin-top: 2em;
+    }
+    main>section:last-child{
+        margin: 0 0 2em 0;
+    }
+}
+@media (max-width: 560px) {
+    h1{
+        margin-top: 8em;
+    }
+    main>section:last-child{
+        width: 90vw;
+    }
+    .news{
+        width: 100%;
+    }
+    .form{
+        width: calc(100% - 75.2px);
+    }
+    h1+p{
+        display: block;
+        margin: 0 auto 2em auto;
+        min-width: 0;
+        max-width: 20em;
+    }
+    h1{
+        min-width: 0;
+    }
+}
+@media (max-width: 366px) {
+    h1{
+        margin-top: 10em;
+    }
+}
+@media (max-width: 320px) {
+    h1{
+        margin-top: 14em;
+    }
 }
